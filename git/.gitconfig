@@ -1,2 +1,5 @@
 [alias]
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lg = "!f() { \
+			git log -25 --graph --pretty=tformat:'%C(yellow)%h%Creset -%C(green)%d%Creset %s %C(bold cyan)(%aN)%Creset' $1 \
+			; \
+		}; f"
